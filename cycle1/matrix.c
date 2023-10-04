@@ -89,7 +89,7 @@ printf("\n");
 }
 void multiply()
 {
-printf("Sum of the matrix is:\n");
+printf("product of the matrix is:\n");
 for(i=0;i<n;i++)
 {
 for(j=0;j<m;j++)

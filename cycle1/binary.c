@@ -1,91 +1,68 @@
 #include <stdio.h>
 
-int linearSearch(int arr[], int size, int target) {
-    for (int i = 0; i < size; i++) {
-        if (arr[i] == target) {
-            return i;
+void search(int arr[], int size, int key, int isBinary) {
+    if (isBinary) {
+        int left = 0, right = size - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == key) {
+                printf("Element found at index %d.\n", mid);
+                return;
+            }
+            if (arr[mid] < key) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+    } else {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == key) {
+                printf("Element found at index %d.\n", i);
+                return;
+            }
         }
     }
-    return -1;
-}
-
-int binarySearch(int arr[], int size, int target) {
-    int left = 0, right = size - 1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (arr[mid] == target) {
-            return mid;
-        }
-        if (arr[mid] < target) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return -1; 
+    printf("Element not found.\n");
 }
 
 int main() {
-    int arr[100];
-    int size, target, choice, result;
+    int size, choice;
 
-
-    printf("Enter the size of the array (max 100): ");
+    printf("Enter the size of the array: ");
     scanf("%d", &size);
 
+    if (size <= 0) {
+        printf("Invalid array size.\n");
+        return 1;
+    }
 
-    printf("Enter the elements of the array:\n");
+    int arr[size];
+    printf("Enter %d elements:\n", size);
     for (int i = 0; i < size; i++) {
         scanf("%d", &arr[i]);
     }
 
+    int key;
     while (1) {
-        printf("\nSelect an option:\n 1. Linear Search\n 2. Binary Search\n 3. Exit\n");
+        printf("1. Linear Search\n2. Binary Search\n3. Exit\nEnter your choice: ");
         scanf("%d", &choice);
 
         switch (choice) {
             case 1:
-
-                printf("Enter the value to search for: ");
-                scanf("%d", &target);
-                result = linearSearch(arr, size, target);
-                if (result != -1) {
-                    printf("Linear search: Element %d found at index %d.\n", target, result);
-                } else {
-                    printf("Linear search: Element %d not found.\n", target);
-                }
-                break;
-
             case 2:
-        
-                for (int i = 0; i < size-1; i++) {
-                    for (int j = 0; j < size-i-1; j++) {
-                        if (arr[j] > arr[j+1]) {
-                            int temp = arr[j];
-                            arr[j] = arr[j+1];
-                            arr[j+1] = temp;
-                        }
-                    }
-                }
-
-                printf("Enter the value to search for: ");
-                scanf("%d", &target);
-                result = binarySearch(arr, size, target);
-                if (result != -1) {
-                    printf("Binary search: Element %d found at index %d.\n", target, result);
-                } else {
-                    printf("Binary search: Element %d not found.\n", target);
-                }
+                printf("Enter the element to search for: ");
+                scanf("%d", &key);
+                search(arr, size, key, choice == 2);
                 break;
-
             case 3:
-                return 0; 
-
+                printf("Exiting...\n");
+                return 0;
             default:
                 printf("Invalid choice. Please try again.\n");
                 break;
         }
-  }
+    }
 
-      return 0;
+    return 0;
 }

@@ -4,7 +4,7 @@
 
 void getString(char str[MAX_LENGTH])
 {
-  printf("Enter a string (max %d characters): ", MAX_LENGTH);
+  printf("Enter a string : ", MAX_LENGTH);
   scanf(" %[^\n]s", str);
 }
 
@@ -61,19 +61,19 @@ int main()
     switch (choice)
     {
       case 1:
-       	// Search for substring
+
         printf("Enter the substring to search for: ");
         scanf(" %[^\n]s", subStr);
         searchSubstring(str1, subStr);
         break;
 
       case 2:
-       	// Concatenate strings
+
         concatenateStrings(str1, str2);
         break;
 
       case 3:
-       	// Get substring
+  
         printf("Enter the start position: ");
         scanf("%d", &start);
         printf("Enter the length: ");
@@ -82,7 +82,7 @@ int main()
         break;
 
       case 4:
-        return 0;	// Exit the program
+        return 0;	
 
       default:
         printf("Invalid choice. Please try again.\n");
