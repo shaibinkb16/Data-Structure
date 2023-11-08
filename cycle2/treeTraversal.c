@@ -57,11 +57,11 @@ void breadthFirstSearch(struct Node* root) {
     if (root == NULL)
         return;
 
-    // Initialize a queue for BFS
+  
     struct Node* queue[100];
     int front = -1, rear = -1;
 
-    // Enqueue the root node
+
     queue[++rear] = root;
 
     while (front < rear) {

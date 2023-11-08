@@ -2,7 +2,6 @@
 
 #define MAX_SIZE 100
 
-// Function to read elements of a set from the user
 int readSet(int set[]) {
     int size, i;
 
@@ -17,7 +16,6 @@ int readSet(int set[]) {
     return size;
 }
 
-// Function to display the elements of a set
 void displaySet(int set[], int size) {
     int i;
 
@@ -28,12 +26,12 @@ void displaySet(int set[], int size) {
     printf("}\n");
 }
 
-// Function to perform set union
+
 int setUnion(int set1[], int size1, int set2[], int size2, int result[]) {
     int i, j, k = 0;
 
     for (i = 0; i < size1; i++) {
-        result[k++] = set1[i];
+        result[k++] = set1[i];.
     }
 
     for (i = 0; i < size2; i++) {
@@ -52,7 +50,7 @@ int setUnion(int set1[], int size1, int set2[], int size2, int result[]) {
     return k;
 }
 
-// Function to perform set intersection
+
 int setIntersection(int set1[], int size1, int set2[], int size2, int result[]) {
     int i, j, k = 0;
 
@@ -68,7 +66,7 @@ int setIntersection(int set1[], int size1, int set2[], int size2, int result[]) 
     return k;
 }
 
-// Function to perform set difference (set1 - set2)
+
 int setDifference(int set1[], int size1, int set2[], int size2, int result[]) {
     int i, j, k = 0;
 

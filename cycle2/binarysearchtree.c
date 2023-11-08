@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the structure for a Node in the Binary Search Tree
+
 struct Node {
     int data;
     struct Node* left;
     struct Node* right;
 };
 
-// Function to create a new Node
 struct Node* createNode(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -16,7 +15,7 @@ struct Node* createNode(int value) {
     return newNode;
 }
 
-// Function to insert a value into the BST
+
 struct Node* insert(struct Node* root, int value) {
     if (root == NULL)
         return createNode(value);
@@ -29,7 +28,6 @@ struct Node* insert(struct Node* root, int value) {
     return root;
 }
 
-// Function to find the minimum value in the BST
 struct Node* findMin(struct Node* node) {
     struct Node* current = node;
     while (current && current->left != NULL)
@@ -37,7 +35,7 @@ struct Node* findMin(struct Node* node) {
     return current;
 }
 
-// Function to delete a value from the BST
+
 struct Node* deleteNode(struct Node* root, int value) {
     if (root == NULL)
         return root;
@@ -65,7 +63,6 @@ struct Node* deleteNode(struct Node* root, int value) {
     return root;
 }
 
-// Function to search for a value in the BST
 struct Node* search(struct Node* root, int value) {
     if (root == NULL || root->data == value)
         return root;
@@ -76,7 +73,7 @@ struct Node* search(struct Node* root, int value) {
     return search(root->right, value);
 }
 
-// Function to perform an in-order traversal of the BST
+
 void inOrderTraversal(struct Node* root) {
     if (root != NULL) {
         inOrderTraversal(root->left);
@@ -84,8 +81,7 @@ void inOrderTraversal(struct Node* root) {
         inOrderTraversal(root->right);
     }
 }
-
-// Main function
+             
 int main() {
     struct Node* root = NULL;
     int choice, value;

@@ -201,7 +201,7 @@ int main() {
 
             case 9:
                 printf("Exiting...\n");
-                break;
+                break;   
 
             default:
                 printf("Invalid choice. Please try again.\n");
