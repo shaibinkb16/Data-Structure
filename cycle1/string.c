@@ -4,7 +4,7 @@
 
 void getString(char str[MAX_LENGTH])
 {
-  printf("Enter a string : ", MAX_LENGTH);
+  printf("Enter a string : ");
   scanf(" %[^\n]s", str);
 }
 

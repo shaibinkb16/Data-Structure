@@ -1,36 +1,4 @@
-Attachment cycle3.eml added.
-Conversation opened. 2 messages. All messages read.
 
-Skip to content
-Using St. Joseph's College of Engineering and Technology, Palai Mail with screen readers
-1 of 41
-cycle3
-Inbox
-Ponnu Augustine <ponnuaugustine2025@mca.sjcetpalai.ac.in>
-	
-Attachments2:55 PM (11 minutes ago)
-	
-to me
-
- 8 Attachments  •  Scanned by Gmail
-Shaibin Kb <shaibinkb2025@mca.sjcetpalai.ac.in>
-	
-Attachments2:57 PM (9 minutes ago)
-	
-to Shijo
-
-
----------- Forwarded message ---------
-From: Ponnu Augustine <ponnuaugustine2025@mca.sjcetpalai.ac.in>
-Date: Wed, Nov 22, 2023 at 2:55 PM
-Subject: cycle3
-To: Shaibin Kb <shaibinkb2025@mca.sjcetpalai.ac.in>
-
-
-
-
- 8 Attachments  •  Scanned by Gmail
-	
 
 // Implementing Red-Black Tree in C
 

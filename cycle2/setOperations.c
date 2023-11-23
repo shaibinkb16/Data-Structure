@@ -31,7 +31,7 @@ int setUnion(int set1[], int size1, int set2[], int size2, int result[]) {
     int i, j, k = 0;
 
     for (i = 0; i < size1; i++) {
-        result[k++] = set1[i];.
+        result[k++] = set1[i];
     }
 
     for (i = 0; i < size2; i++) {
